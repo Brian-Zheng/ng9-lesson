@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
   selfprop = '自定義property';
   showicons = true;
 
+  fontSize = 12;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -31,5 +33,15 @@ export class HeaderComponent implements OnInit {
   al(args) {
     alert('trigger ctrl+C');
     console.log(args);
+  }
+
+  changeSize(args) {
+    // console.log(args.deltaY);
+    if(args.deltaY > 0) {
+      this.fontSize += 1;
+      // console.log(this.fontSize);
+    } else {
+      this.fontSize -= 1;
+    }
   }
 }

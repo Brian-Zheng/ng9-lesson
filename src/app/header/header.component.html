@@ -28,8 +28,11 @@
             <img [src]="imgsrc" [attr.urprop]="selfprop" (click)="changeTitle($event)" class="pull-left logo" alt="The Will Will Web">
 
             <div class="pull-left">
-                <h1><a href="http://blog.miniasp.com/" (keyup.control.c)="al($event)">{{sitename}}</a></h1>
-                <h3 [innerHTML]="subtitle"></h3>
+                <!-- <h1 [ngStyle]="{'font-size': fontSize + 'px'}" (wheel)="changeSize($event)"> -->
+                <h1 [style.font-size.px]="fontSize" (wheel)="changeSize($event)">
+                    <a href="http://blog.miniasp.com/" (keyup.control.c)="al($event)">{{sitename}}</a>
+                </h1>
+                <h3 [innerHTML]="subtitle" [class.highlight]="fontSize % 2 == 0"></h3>
             </div>
             <app-social-icons *ngIf="showicons"></app-social-icons>
         </div>
