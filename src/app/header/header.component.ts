@@ -9,6 +9,12 @@ export class HeaderComponent implements OnInit {
 
   sitename = 'The Will Will Web';
 
+  imgsrc = '/assets/images/logo.png';
+
+  subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
+
+  selfprop = '自定義property';
+
   constructor() { }
 
   ngOnInit(): void {
