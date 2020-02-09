@@ -9,8 +9,10 @@ export class AppComponent {
   title = 'demo';
 
   keyword = '';
+  // keywordClick = '';
 
   clearKeyWord() {
     this.keyword = '';
   }
+
 }
