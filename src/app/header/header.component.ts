@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  sitename = 'The Will Will Web';
+
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.sitename = 'in ng on init';
+    }, 2000);
   }
-
 }
