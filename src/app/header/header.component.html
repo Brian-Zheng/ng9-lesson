@@ -25,10 +25,10 @@
     <div class="title-wrapper">
         <div class="container" (mouseover)="showicons=true;" (mouseleave)="showicons=false;">
 
-            <img [src]="imgsrc" [attr.urprop]="selfprop" (click)="changeTitle()" class="pull-left logo" alt="The Will Will Web">
+            <img [src]="imgsrc" [attr.urprop]="selfprop" (click)="changeTitle($event)" class="pull-left logo" alt="The Will Will Web">
 
             <div class="pull-left">
-                <h1><a href="http://blog.miniasp.com/">{{sitename}}</a></h1>
+                <h1><a href="http://blog.miniasp.com/" (keyup.control.c)="al($event)">{{sitename}}</a></h1>
                 <h3 [innerHTML]="subtitle"></h3>
             </div>
             <app-social-icons *ngIf="showicons"></app-social-icons>
