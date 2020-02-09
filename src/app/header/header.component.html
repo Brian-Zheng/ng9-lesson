@@ -23,15 +23,15 @@
         </div>
     </div>
     <div class="title-wrapper">
-        <div class="container">
+        <div class="container" (mouseover)="showicons=true;" (mouseleave)="showicons=false;">
 
-            <img [src]="imgsrc" [attr.urprop]="selfprop" class="pull-left logo" alt="The Will Will Web">
+            <img [src]="imgsrc" [attr.urprop]="selfprop" (click)="changeTitle()" class="pull-left logo" alt="The Will Will Web">
 
             <div class="pull-left">
                 <h1><a href="http://blog.miniasp.com/">{{sitename}}</a></h1>
                 <h3 [innerHTML]="subtitle"></h3>
             </div>
-            <app-social-icons></app-social-icons>
+            <app-social-icons *ngIf="showicons"></app-social-icons>
         </div>
     </div>
 </header>

@@ -15,6 +15,12 @@ export class HeaderComponent implements OnInit {
 
   selfprop = '自定義property';
 
+  showicons = true;
+
+  changeTitle() {
+    this.sitename = this.sitename + '!';
+  }
+
   constructor() { }
 
   ngOnInit(): void {
