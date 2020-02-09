@@ -35,13 +35,14 @@ export class HeaderComponent implements OnInit {
     console.log(args);
   }
 
-  changeSize(args) {
-    // console.log(args.deltaY);
-    if(args.deltaY > 0) {
+  changeSize(evt: WheelEvent) {
+    // console.log(evt.deltaY);
+    if(evt.deltaY > 0) {
       this.fontSize += 1;
       // console.log(this.fontSize);
     } else {
       this.fontSize -= 1;
     }
+    evt.preventDefault();
   }
 }
